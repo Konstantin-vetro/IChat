@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063FE1B42EA6B65D00CB28D9 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1B32EA6B65D00CB28D9 /* UIButton + Extension.swift */; };
+		063FE1B62EA6BAB300CB28D9 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1B52EA6BAB300CB28D9 /* UIFont + Extension.swift */; };
+		063FE1B82EA6BD5800CB28D9 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1B72EA6BD5800CB28D9 /* UIColor + Extension.swift */; };
+		063FE1BA2EA6C34000CB28D9 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1B92EA6C34000CB28D9 /* UILabel + Extension.swift */; };
+		063FE1BD2EA6C5BC00CB28D9 /* UIImageView + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1BC2EA6C5BC00CB28D9 /* UIImageView + extension.swift */; };
 		06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A432EA2CF3700810E3D /* AppDelegate.swift */; };
 		06554A462EA2CF3700810E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A452EA2CF3700810E3D /* SceneDelegate.swift */; };
-		06554A482EA2CF3700810E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A472EA2CF3700810E3D /* ViewController.swift */; };
+		06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A472EA2CF3700810E3D /* AuthViewController.swift */; };
 		06554A4D2EA2CF3E00810E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06554A4C2EA2CF3E00810E3D /* Assets.xcassets */; };
 		06554A502EA2CF3E00810E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06554A4E2EA2CF3E00810E3D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		063FE1B32EA6B65D00CB28D9 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		063FE1B52EA6BAB300CB28D9 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		063FE1B72EA6BD5800CB28D9 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		063FE1B92EA6C34000CB28D9 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		063FE1BC2EA6C5BC00CB28D9 /* UIImageView + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + extension.swift"; sourceTree = "<group>"; };
 		06554A402EA2CF3700810E3D /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06554A432EA2CF3700810E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06554A452EA2CF3700810E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06554A472EA2CF3700810E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06554A472EA2CF3700810E3D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		06554A4C2EA2CF3E00810E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06554A4F2EA2CF3E00810E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06554A512EA2CF3F00810E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +45,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063FE1BB2EA6C35100CB28D9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				063FE1B92EA6C34000CB28D9 /* UILabel + Extension.swift */,
+				063FE1B72EA6BD5800CB28D9 /* UIColor + Extension.swift */,
+				063FE1B32EA6B65D00CB28D9 /* UIButton + Extension.swift */,
+				063FE1B52EA6BAB300CB28D9 /* UIFont + Extension.swift */,
+				063FE1BC2EA6C5BC00CB28D9 /* UIImageView + extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		06554A372EA2CF3700810E3D = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +78,8 @@
 			children = (
 				06554A432EA2CF3700810E3D /* AppDelegate.swift */,
 				06554A452EA2CF3700810E3D /* SceneDelegate.swift */,
-				06554A472EA2CF3700810E3D /* ViewController.swift */,
+				06554A472EA2CF3700810E3D /* AuthViewController.swift */,
+				063FE1BB2EA6C35100CB28D9 /* Helpers */,
 				06554A4C2EA2CF3E00810E3D /* Assets.xcassets */,
 				06554A4E2EA2CF3E00810E3D /* LaunchScreen.storyboard */,
 				06554A512EA2CF3F00810E3D /* Info.plist */,
@@ -134,9 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06554A482EA2CF3700810E3D /* ViewController.swift in Sources */,
+				063FE1B62EA6BAB300CB28D9 /* UIFont + Extension.swift in Sources */,
+				06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */,
 				06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */,
+				063FE1BA2EA6C34000CB28D9 /* UILabel + Extension.swift in Sources */,
+				063FE1BD2EA6C5BC00CB28D9 /* UIImageView + extension.swift in Sources */,
+				063FE1B82EA6BD5800CB28D9 /* UIColor + Extension.swift in Sources */,
 				06554A462EA2CF3700810E3D /* SceneDelegate.swift in Sources */,
+				063FE1B42EA6B65D00CB28D9 /* UIButton + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
