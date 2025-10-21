@@ -14,6 +14,8 @@
 		063FE1BD2EA6C5BC00CB28D9 /* UIImageView + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1BC2EA6C5BC00CB28D9 /* UIImageView + extension.swift */; };
 		063FE1BF2EA6CF3C00CB28D9 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1BE2EA6CF3C00CB28D9 /* ButtonFormView.swift */; };
 		063FE1C22EA6E36100CB28D9 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1C12EA6E36000CB28D9 /* UIStackView + Extension.swift */; };
+		063FE1C42EA8017300CB28D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1C32EA8017300CB28D9 /* SignUpViewController.swift */; };
+		063FE1C72EA8058900CB28D9 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */; };
 		06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A432EA2CF3700810E3D /* AppDelegate.swift */; };
 		06554A462EA2CF3700810E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A452EA2CF3700810E3D /* SceneDelegate.swift */; };
 		06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A472EA2CF3700810E3D /* AuthViewController.swift */; };
@@ -29,6 +31,8 @@
 		063FE1BC2EA6C5BC00CB28D9 /* UIImageView + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + extension.swift"; sourceTree = "<group>"; };
 		063FE1BE2EA6CF3C00CB28D9 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		063FE1C12EA6E36000CB28D9 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		063FE1C32EA8017300CB28D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		06554A402EA2CF3700810E3D /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06554A432EA2CF3700810E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06554A452EA2CF3700810E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 		063FE1BB2EA6C35100CB28D9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				063FE1C52EA8056800CB28D9 /* CustomViews */,
 				063FE1B92EA6C34000CB28D9 /* UILabel + Extension.swift */,
 				063FE1B72EA6BD5800CB28D9 /* UIColor + Extension.swift */,
 				063FE1B32EA6B65D00CB28D9 /* UIButton + Extension.swift */,
@@ -66,9 +71,18 @@
 			isa = PBXGroup;
 			children = (
 				06554A472EA2CF3700810E3D /* AuthViewController.swift */,
-				063FE1BE2EA6CF3C00CB28D9 /* ButtonFormView.swift */,
+				063FE1C32EA8017300CB28D9 /* SignUpViewController.swift */,
 			);
 			path = AuthVC;
+			sourceTree = "<group>";
+		};
+		063FE1C52EA8056800CB28D9 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				063FE1BE2EA6CF3C00CB28D9 /* ButtonFormView.swift */,
+				063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		06554A372EA2CF3700810E3D = {
@@ -171,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063FE1C72EA8058900CB28D9 /* OneLineTextField.swift in Sources */,
+				063FE1C42EA8017300CB28D9 /* SignUpViewController.swift in Sources */,
 				063FE1B62EA6BAB300CB28D9 /* UIFont + Extension.swift in Sources */,
 				06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */,
 				06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */,
