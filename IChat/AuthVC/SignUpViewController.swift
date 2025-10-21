@@ -5,4 +5,110 @@
 //  Created by Гость on 21.10.2025.
 //
 
-import Foundation
+import UIKit
+import SwiftUI
+
+final class SignUpViewController: UIViewController {
+
+    // MARK: - SubViews
+
+    private let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
+
+    private let emailLabel = UILabel(text: "Email")
+    private let passwordLabel = UILabel(text: "Password")
+    private let confirmPasswordLabel = UILabel(text: "Confirm password")
+    private let alreadyOnboardLabel = UILabel(text: "Already onboard?")
+
+    private let emailTextField = OneLineTextField(font: .avenir20())
+    private let passwordTextField = OneLineTextField(font: .avenir20())
+    private let ConfirmPasswordTextField = OneLineTextField(font: .avenir20())
+
+    private let signUpButton = UIButton(
+        title: "Sign Up",
+        titleColor: .white,
+        backgroundColor: .blackDark()
+    )
+
+    private lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Login", for: .normal)
+        button.setTitleColor(.buttonRed(), for: .normal)
+        button.titleLabel?.font = .avenir20()
+        return button
+    }()
+
+    // MARK: - LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+
+        setupConstraints()
+    }
+
+    // MARK: - Setup Constraints
+
+    private func setupConstraints() {
+        let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)
+        let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField], axis: .vertical, spacing: 0)
+        let confirmPasswordStackView = UIStackView(arrangedSubviews: [confirmPasswordLabel, ConfirmPasswordTextField], axis: .vertical, spacing: 0)
+
+        signUpButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+
+        let stackView = UIStackView(
+            arrangedSubviews: [
+                emailStackView,
+                passwordStackView,
+                confirmPasswordStackView,
+                signUpButton
+            ],
+            axis: .vertical,
+            spacing: 40
+        )
+
+        let bottomStackView = UIStackView(
+            arrangedSubviews: [
+                alreadyOnboardLabel,
+                loginButton
+            ],
+            axis: .horizontal,
+            spacing: -1
+        )
+
+        [welcomeLabel, stackView, bottomStackView].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
+
+        NSLayoutConstraint.activate([
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant:  160),
+            welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+
+            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant:  160),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -40),
+
+            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant:  60),
+            bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  40),
+            bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -40)
+        ])
+    }
+}
+
+// MARK: - SwiftUI Preview
+
+struct SignUpVCProvider: PreviewProvider {
+    static var previews: some View {
+        ContainerView().edgesIgnoringSafeArea(.all)
+    }
+
+    struct ContainerView: UIViewControllerRepresentable {
+
+        let viewController = SignUpViewController()
+
+        func makeUIViewController(context: Context) -> SignUpViewController {
+            return viewController
+        }
+
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+    }
+}
