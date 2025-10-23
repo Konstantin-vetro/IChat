@@ -30,7 +30,7 @@ final class SignUpViewController: UIViewController {
     )
 
     private lazy var loginButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
