@@ -34,6 +34,7 @@ final class SignUpViewController: UIViewController {
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
+        button.contentHorizontalAlignment = .leading
         return button
     }()
 
@@ -71,8 +72,9 @@ final class SignUpViewController: UIViewController {
                 loginButton
             ],
             axis: .horizontal,
-            spacing: -1
+            spacing: 10
         )
+        bottomStackView.alignment = .firstBaseline
 
         [welcomeLabel, stackView, bottomStackView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
