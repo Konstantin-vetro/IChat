@@ -17,6 +17,8 @@
 		063FE1C42EA8017300CB28D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1C32EA8017300CB28D9 /* SignUpViewController.swift */; };
 		063FE1C72EA8058900CB28D9 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */; };
 		063FE1CB2EAAAC6C00CB28D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1CA2EAAAC6C00CB28D9 /* LoginViewController.swift */; };
+		063FE1CD2EAAB3C200CB28D9 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1CC2EAAB3C200CB28D9 /* SetupProfileViewController.swift */; };
+		063FE1CF2EAAC61600CB28D9 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1CE2EAAC61600CB28D9 /* AddPhotoView.swift */; };
 		06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A432EA2CF3700810E3D /* AppDelegate.swift */; };
 		06554A462EA2CF3700810E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A452EA2CF3700810E3D /* SceneDelegate.swift */; };
 		06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A472EA2CF3700810E3D /* AuthViewController.swift */; };
@@ -35,6 +37,8 @@
 		063FE1C32EA8017300CB28D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		063FE1CA2EAAAC6C00CB28D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		063FE1CC2EAAB3C200CB28D9 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		063FE1CE2EAAC61600CB28D9 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		06554A402EA2CF3700810E3D /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06554A432EA2CF3700810E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06554A452EA2CF3700810E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 				06554A472EA2CF3700810E3D /* AuthViewController.swift */,
 				063FE1C32EA8017300CB28D9 /* SignUpViewController.swift */,
 				063FE1CA2EAAAC6C00CB28D9 /* LoginViewController.swift */,
+				063FE1CC2EAAB3C200CB28D9 /* SetupProfileViewController.swift */,
 			);
 			path = AuthVC;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			children = (
 				063FE1BE2EA6CF3C00CB28D9 /* ButtonFormView.swift */,
 				063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */,
+				063FE1CE2EAAC61600CB28D9 /* AddPhotoView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -192,8 +198,10 @@
 				063FE1C42EA8017300CB28D9 /* SignUpViewController.swift in Sources */,
 				063FE1B62EA6BAB300CB28D9 /* UIFont + Extension.swift in Sources */,
 				06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */,
+				063FE1CD2EAAB3C200CB28D9 /* SetupProfileViewController.swift in Sources */,
 				06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */,
 				063FE1C22EA6E36100CB28D9 /* UIStackView + Extension.swift in Sources */,
+				063FE1CF2EAAC61600CB28D9 /* AddPhotoView.swift in Sources */,
 				063FE1BF2EA6CF3C00CB28D9 /* ButtonFormView.swift in Sources */,
 				063FE1BA2EA6C34000CB28D9 /* UILabel + Extension.swift in Sources */,
 				063FE1BD2EA6C5BC00CB28D9 /* UIImageView + extension.swift in Sources */,
