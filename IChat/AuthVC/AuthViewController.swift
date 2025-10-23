@@ -37,6 +37,7 @@ final class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        googleButton.customizeGoogleButton()
         setupConstraints()
     }
 
