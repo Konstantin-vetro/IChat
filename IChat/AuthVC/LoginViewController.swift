@@ -17,7 +17,6 @@ final class LoginViewController: UIViewController {
     private let orLabel = UILabel(text: "or")
     private let emailLabel = UILabel(text: "Email")
     private let passwordLabel = UILabel(text: "Password")
-    private let confirmPasswordLabel = UILabel(text: "Confirm password")
     private let needAnAccountLabel = UILabel(text: "Need an account?")
 
     private let emailTextField = OneLineTextField(font: .avenir20())
