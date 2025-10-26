@@ -21,11 +21,30 @@ final class ListViewController: UIViewController {
         return collectionView
     }()
 
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Поиск"
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.searchResultsUpdater = self
+        searchController.definesPresentationContext = true
+        return searchController
+    }()
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setupSearchBar()
         setupCollectionView()
+    }
+
+    // MARK: - Setup Search Bar
+    private func setupSearchBar() {
+        navigationController?.navigationBar.barTintColor = .mainWhite
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
 
     private func setupCollectionView() {
@@ -43,6 +62,14 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
         cell.backgroundColor = .red
         return cell
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension ListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+        print("Поиск: \(searchText)")
     }
 }
 
