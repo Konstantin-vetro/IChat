@@ -12,7 +12,7 @@ final class ListViewController: UIViewController {
 
     // MARK: - Subviews
     private lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: createCompositionaLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
@@ -49,6 +49,20 @@ final class ListViewController: UIViewController {
 
     private func setupCollectionView() {
         view.addSubview(collectionView)
+    }
+
+    private func createCompositionaLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnviroment in
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(86))
+            let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+            group.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 0, bottom: 8, trailing: 0)
+            let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 20, bottom: 0, trailing: 20)
+            return section
+        }
+        return layout
     }
 }
 
