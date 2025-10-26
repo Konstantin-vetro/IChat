@@ -8,7 +8,35 @@
 import UIKit
 import SwiftUI
 
+struct MChat: Hashable {
+    let username: String
+    let userImage: UIImage
+    let lastMessage: String
+    let id = UUID()
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: MChat, rhs: MChat) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
 final class ListViewController: UIViewController {
+
+    // MARK: - Properties
+    private var chats: [MChat] = [
+        MChat(username: "Lex", userImage: UIImage(named: "human1") ?? UIImage(), lastMessage: "How are you?"),
+        MChat(username: "Lisa", userImage: UIImage(named: "human2") ?? UIImage(), lastMessage: "Hello"),
+        MChat(username: "Max", userImage: UIImage(named: "human3") ?? UIImage(), lastMessage: ")))")
+    ]
+
+    enum Section: Int, CaseIterable {
+        case activeChats
+    }
+
+    var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
 
     // MARK: - Subviews
     private lazy var collectionView: UICollectionView = {
@@ -16,8 +44,6 @@ final class ListViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
-        collectionView.delegate = self
-        collectionView.dataSource = self
         return collectionView
     }()
 
@@ -37,6 +63,8 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         setupCollectionView()
+        createDataSource()
+        reloadData()
     }
 
     // MARK: - Setup Search Bar
@@ -51,6 +79,29 @@ final class ListViewController: UIViewController {
         view.addSubview(collectionView)
     }
 
+    private func createDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, MChat>(
+            collectionView: collectionView,
+            cellProvider: { collectionView, indexPath, chat in
+                guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section kind")}
+                switch section {
+
+                case .activeChats:
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
+                    cell.backgroundColor = .systemBlue
+                    return cell
+                }
+            }
+        )
+    }
+
+    private func reloadData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, MChat>()
+        snapshot.appendSections([.activeChats])
+        snapshot.appendItems(chats, toSection: .activeChats)
+        dataSource?.apply(snapshot, animatingDifferences: true)
+    }
+
     private func createCompositionaLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnviroment in
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
@@ -63,19 +114,6 @@ final class ListViewController: UIViewController {
             return section
         }
         return layout
-    }
-}
-
-// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
-extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
-        cell.backgroundColor = .red
-        return cell
     }
 }
 
