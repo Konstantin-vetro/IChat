@@ -23,7 +23,7 @@ final class SetupProfileViewController: UIViewController {
     private let aboutMeTextField = OneLineTextField(font: .avenir20())
 
     private let sexSegmentedControl = UISegmentedControl(first: "Male", second: "Female")
-    private let goToChatsButton = UIButton(title: "Go to chats!", titleColor: .white, backgroundColor: .blackDark())
+    private let goToChatsButton = UIButton(title: "Go to chats!", titleColor: .white, backgroundColor: .blackDark)
 
     // MARK: - LifeCycle
     override func viewDidLoad() {

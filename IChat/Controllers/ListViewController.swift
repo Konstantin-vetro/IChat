@@ -14,7 +14,7 @@ final class ListViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .mainWhite
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -44,8 +44,6 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.backgroundColor = .red
         return cell
     }
-
-
 }
 
 // MARK: - SwiftUI Preview
@@ -56,10 +54,10 @@ struct ListVCProvider: PreviewProvider {
 
     struct ContainerView: UIViewControllerRepresentable {
 
-        let viewController = ListViewController()
+        let tabbarController = MainTabbarController()
 
-        func makeUIViewController(context: Context) -> ListViewController {
-            return viewController
+        func makeUIViewController(context: Context) -> MainTabbarController {
+            return tabbarController
         }
 
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}

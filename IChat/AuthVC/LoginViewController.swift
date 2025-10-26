@@ -23,12 +23,12 @@ final class LoginViewController: UIViewController {
     private let passwordTextField = OneLineTextField(font: .avenir20())
 
     private let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadow: true)
-    private let loginButton = UIButton(title: "Login", titleColor: .white, backgroundColor: .blackDark())
+    private let loginButton = UIButton(title: "Login", titleColor: .white, backgroundColor: .blackDark)
 
     private lazy var signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
-        button.setTitleColor(.buttonRed(), for: .normal)
+        button.setTitleColor(.buttonRed, for: .normal)
         button.titleLabel?.font = .avenir20()
         button.contentHorizontalAlignment = .leading
         return button

@@ -24,11 +24,11 @@ final class AuthViewController: UIViewController {
     private let emailButton = UIButton(
         title: "Email",
         titleColor: .white,
-        backgroundColor: .blackDark())
+        backgroundColor: .blackDark)
 
     private let LoginButton = UIButton(
         title: "Login",
-        titleColor: .buttonRed(),
+        titleColor: .buttonRed,
         backgroundColor: .white,
         isShadow: true)
 

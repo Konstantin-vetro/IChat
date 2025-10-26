@@ -26,13 +26,13 @@ final class SignUpViewController: UIViewController {
     private let signUpButton = UIButton(
         title: "Sign Up",
         titleColor: .white,
-        backgroundColor: .blackDark()
+        backgroundColor: .blackDark
     )
 
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
-        button.setTitleColor(.buttonRed(), for: .normal)
+        button.setTitleColor(.buttonRed, for: .normal)
         button.titleLabel?.font = .avenir20()
         button.contentHorizontalAlignment = .leading
         return button
