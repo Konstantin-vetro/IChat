@@ -30,6 +30,7 @@
 		0661E9F62EB91E370031DB61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F52EB91E360031DB61 /* GradientView.swift */; };
 		0661E9F82EB92C6C0031DB61 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F72EB92C6C0031DB61 /* WaitingChatCell.swift */; };
 		0661E9FA2EB92E130031DB61 /* SelfConfigureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F92EB92E130031DB61 /* SelfConfigureCell.swift */; };
+		0661E9FD2EB933430031DB61 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9FC2EB933430031DB61 /* SectionHeader.swift */; };
 		06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804C2EAD447400434D60 /* MainTabbarController.swift */; };
 		06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804E2EAD44E200434D60 /* PeopleViewController.swift */; };
 		06ED80522EB137F000434D60 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ED80502EB137EE00434D60 /* activeChats.json */; };
@@ -63,6 +64,7 @@
 		0661E9F52EB91E360031DB61 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		0661E9F72EB92C6C0031DB61 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		0661E9F92EB92E130031DB61 /* SelfConfigureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfigureCell.swift; sourceTree = "<group>"; };
+		0661E9FC2EB933430031DB61 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		06ED804C2EAD447400434D60 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		06ED804E2EAD44E200434D60 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		06ED80502EB137EE00434D60 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				0661E9F42EB5394E0031DB61 /* Cell */,
 				063FE1D22EAD3EC000CB28D9 /* ListViewController.swift */,
+				0661E9FC2EB933430031DB61 /* SectionHeader.swift */,
 				06ED804C2EAD447400434D60 /* MainTabbarController.swift */,
 				06ED804E2EAD44E200434D60 /* PeopleViewController.swift */,
 			);
@@ -255,6 +258,7 @@
 			files = (
 				063FE1D32EAD3EC000CB28D9 /* ListViewController.swift in Sources */,
 				063FE1C72EA8058900CB28D9 /* OneLineTextField.swift in Sources */,
+				0661E9FD2EB933430031DB61 /* SectionHeader.swift in Sources */,
 				0661E9F62EB91E370031DB61 /* GradientView.swift in Sources */,
 				063FE1C42EA8017300CB28D9 /* SignUpViewController.swift in Sources */,
 				063FE1B62EA6BAB300CB28D9 /* UIFont + Extension.swift in Sources */,
