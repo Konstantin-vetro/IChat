@@ -28,6 +28,8 @@
 		06554A502EA2CF3E00810E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06554A4E2EA2CF3E00810E3D /* LaunchScreen.storyboard */; };
 		0661E9F32EB539480031DB61 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F22EB539480031DB61 /* ActiveChatCell.swift */; };
 		0661E9F62EB91E370031DB61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F52EB91E360031DB61 /* GradientView.swift */; };
+		0661E9F82EB92C6C0031DB61 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F72EB92C6C0031DB61 /* WaitingChatCell.swift */; };
+		0661E9FA2EB92E130031DB61 /* SelfConfigureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F92EB92E130031DB61 /* SelfConfigureCell.swift */; };
 		06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804C2EAD447400434D60 /* MainTabbarController.swift */; };
 		06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804E2EAD44E200434D60 /* PeopleViewController.swift */; };
 		06ED80522EB137F000434D60 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ED80502EB137EE00434D60 /* activeChats.json */; };
@@ -59,6 +61,8 @@
 		06554A512EA2CF3F00810E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0661E9F22EB539480031DB61 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		0661E9F52EB91E360031DB61 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		0661E9F72EB92C6C0031DB61 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
+		0661E9F92EB92E130031DB61 /* SelfConfigureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfigureCell.swift; sourceTree = "<group>"; };
 		06ED804C2EAD447400434D60 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		06ED804E2EAD44E200434D60 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		06ED80502EB137EE00434D60 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				06554A452EA2CF3700810E3D /* SceneDelegate.swift */,
 				06ED804B2EAD444200434D60 /* Controllers */,
 				063FE1C02EA6CF4200CB28D9 /* AuthVC */,
+				0661E9FB2EB92E520031DB61 /* Protocols */,
 				063FE1BB2EA6C35100CB28D9 /* Helpers */,
 				06554A4C2EA2CF3E00810E3D /* Assets.xcassets */,
 				06554A4E2EA2CF3E00810E3D /* LaunchScreen.storyboard */,
@@ -152,8 +157,17 @@
 			isa = PBXGroup;
 			children = (
 				0661E9F22EB539480031DB61 /* ActiveChatCell.swift */,
+				0661E9F72EB92C6C0031DB61 /* WaitingChatCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0661E9FB2EB92E520031DB61 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0661E9F92EB92E130031DB61 /* SelfConfigureCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		06ED804B2EAD444200434D60 /* Controllers */ = {
@@ -256,10 +270,12 @@
 				063FE1D12EABE90C00CB28D9 /* SegmentedControl + Extension.swift in Sources */,
 				063FE1BD2EA6C5BC00CB28D9 /* UIImageView + extension.swift in Sources */,
 				063FE1B82EA6BD5800CB28D9 /* UIColor + Extension.swift in Sources */,
+				0661E9F82EB92C6C0031DB61 /* WaitingChatCell.swift in Sources */,
 				06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */,
 				06554A462EA2CF3700810E3D /* SceneDelegate.swift in Sources */,
 				063FE1CB2EAAAC6C00CB28D9 /* LoginViewController.swift in Sources */,
 				063FE1B42EA6B65D00CB28D9 /* UIButton + Extension.swift in Sources */,
+				0661E9FA2EB92E130031DB61 /* SelfConfigureCell.swift in Sources */,
 				06ED80552EB1385D00434D60 /* Bundle + Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,7 +41,7 @@ final class ListViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseID)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid2")
+        collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseID)
         return collectionView
     }()
 
@@ -100,9 +100,7 @@ extension ListViewController {
                 guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section kind")}
                 switch section {
                 case .waitingChats:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid2", for: indexPath)
-                    cell.backgroundColor = .systemBlue
-                    return cell
+                    return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
                 case .activeChats:
                     return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
 
