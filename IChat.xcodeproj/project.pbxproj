@@ -26,6 +26,8 @@
 		06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A472EA2CF3700810E3D /* AuthViewController.swift */; };
 		06554A4D2EA2CF3E00810E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06554A4C2EA2CF3E00810E3D /* Assets.xcassets */; };
 		06554A502EA2CF3E00810E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06554A4E2EA2CF3E00810E3D /* LaunchScreen.storyboard */; };
+		0661E9F32EB539480031DB61 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F22EB539480031DB61 /* ActiveChatCell.swift */; };
+		0661E9F62EB91E370031DB61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661E9F52EB91E360031DB61 /* GradientView.swift */; };
 		06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804C2EAD447400434D60 /* MainTabbarController.swift */; };
 		06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804E2EAD44E200434D60 /* PeopleViewController.swift */; };
 		06ED80522EB137F000434D60 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ED80502EB137EE00434D60 /* activeChats.json */; };
@@ -55,6 +57,8 @@
 		06554A4C2EA2CF3E00810E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06554A4F2EA2CF3E00810E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06554A512EA2CF3F00810E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0661E9F22EB539480031DB61 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		0661E9F52EB91E360031DB61 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		06ED804C2EAD447400434D60 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		06ED804E2EAD44E200434D60 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		06ED80502EB137EE00434D60 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				063FE1BE2EA6CF3C00CB28D9 /* ButtonFormView.swift */,
 				063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */,
 				063FE1CE2EAAC61600CB28D9 /* AddPhotoView.swift */,
+				0661E9F52EB91E360031DB61 /* GradientView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -143,9 +148,18 @@
 			path = IChat;
 			sourceTree = "<group>";
 		};
+		0661E9F42EB5394E0031DB61 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0661E9F22EB539480031DB61 /* ActiveChatCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		06ED804B2EAD444200434D60 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0661E9F42EB5394E0031DB61 /* Cell */,
 				063FE1D22EAD3EC000CB28D9 /* ListViewController.swift */,
 				06ED804C2EAD447400434D60 /* MainTabbarController.swift */,
 				06ED804E2EAD44E200434D60 /* PeopleViewController.swift */,
@@ -227,8 +241,10 @@
 			files = (
 				063FE1D32EAD3EC000CB28D9 /* ListViewController.swift in Sources */,
 				063FE1C72EA8058900CB28D9 /* OneLineTextField.swift in Sources */,
+				0661E9F62EB91E370031DB61 /* GradientView.swift in Sources */,
 				063FE1C42EA8017300CB28D9 /* SignUpViewController.swift in Sources */,
 				063FE1B62EA6BAB300CB28D9 /* UIFont + Extension.swift in Sources */,
+				0661E9F32EB539480031DB61 /* ActiveChatCell.swift in Sources */,
 				06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */,
 				06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */,
 				063FE1CD2EAAB3C200CB28D9 /* SetupProfileViewController.swift in Sources */,
