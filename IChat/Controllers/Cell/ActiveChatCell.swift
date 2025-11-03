@@ -8,11 +8,6 @@
 import UIKit
 import SwiftUI
 
-protocol SelfConfigureCell {
-    static var reuseID: String { get }
-    func configure(with: MChat)
-}
-
 final class ActiveChatCell: UICollectionViewCell, SelfConfigureCell {
 
     // MARK: - Properties
