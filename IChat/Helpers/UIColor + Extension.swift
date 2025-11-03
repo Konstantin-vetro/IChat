@@ -12,4 +12,6 @@ extension UIColor {
     static var mainWhite: UIColor { UIColor(named: "mainWhite") ?? UIColor.white }
     static var blackDark: UIColor { UIColor(named: "mainWhite") ?? UIColor.darkGray }
     static var textFieldLight: UIColor { UIColor(named: "mainWhite") ?? UIColor.lightGray }
+    static var gradientColorFrom: UIColor { UIColor(named: "gradientColorFrom") ?? UIColor.systemPurple }
+    static var gradientColorTo: UIColor { UIColor(named: "gradientColorTo") ?? UIColor.systemBlue }
 }
