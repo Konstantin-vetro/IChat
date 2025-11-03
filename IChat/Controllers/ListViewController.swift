@@ -40,7 +40,7 @@ final class ListViewController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: createCompositionaLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+        collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseID)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid2")
         return collectionView
     }()
@@ -80,21 +80,32 @@ final class ListViewController: UIViewController {
 
 // MARK: - Data Source
 extension ListViewController {
+
+    private func configure<T: SelfConfigureCell>(
+        cellType: T.Type,
+        with model: MChat,
+        for indexPath: IndexPath
+    ) -> T {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: cellType.reuseID, for: indexPath
+        ) as? T else { fatalError("Unable to dequeue \(cellType)")}
+        cell.configure(with: model)
+        return cell
+    }
+
     private func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, MChat>(
             collectionView: collectionView,
             cellProvider: { collectionView, indexPath, chat in
                 guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section kind")}
                 switch section {
-
                 case .waitingChats:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid2", for: indexPath)
-                    cell.backgroundColor = .systemRed
-                    return cell
-                case .activeChats:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
                     cell.backgroundColor = .systemBlue
                     return cell
+                case .activeChats:
+                    return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
+
                 }
             }
         )
