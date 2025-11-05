@@ -8,21 +8,6 @@
 import UIKit
 import SwiftUI
 
-struct MChat: Hashable, Decodable {
-    let username: String
-    let userImageString: String
-    let lastMessage: String
-    let id: Int
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
-    static func == (lhs: MChat, rhs: MChat) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
-
 final class ListViewController: UIViewController {
 
     // MARK: - Properties
