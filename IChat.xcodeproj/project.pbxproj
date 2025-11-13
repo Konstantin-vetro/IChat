@@ -34,6 +34,8 @@
 		0661E9FF2EBBBF890031DB61 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 0661E9FE2EBBBF880031DB61 /* users.json */; };
 		0661EA022EBBC1040031DB61 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661EA012EBBC1040031DB61 /* MUser.swift */; };
 		0661EA042EBBC1190031DB61 /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661EA032EBBC1190031DB61 /* MChat.swift */; };
+		069D30682EC3AF7E008C4DA2 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D30672EC3AF7E008C4DA2 /* UserCell.swift */; };
+		069D306A2EC3B3AA008C4DA2 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */; };
 		06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804C2EAD447400434D60 /* MainTabbarController.swift */; };
 		06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804E2EAD44E200434D60 /* PeopleViewController.swift */; };
 		06ED80522EB137F000434D60 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ED80502EB137EE00434D60 /* activeChats.json */; };
@@ -71,6 +73,8 @@
 		0661E9FE2EBBBF880031DB61 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		0661EA012EBBC1040031DB61 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		0661EA032EBBC1190031DB61 /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
+		069D30672EC3AF7E008C4DA2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		06ED804C2EAD447400434D60 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		06ED804E2EAD44E200434D60 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		06ED80502EB137EE00434D60 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -96,14 +100,7 @@
 				06ED80502EB137EE00434D60 /* activeChats.json */,
 				06ED80512EB137F000434D60 /* waitingChats.json */,
 				063FE1C52EA8056800CB28D9 /* CustomViews */,
-				063FE1B92EA6C34000CB28D9 /* UILabel + Extension.swift */,
-				063FE1B72EA6BD5800CB28D9 /* UIColor + Extension.swift */,
-				063FE1B32EA6B65D00CB28D9 /* UIButton + Extension.swift */,
-				063FE1B52EA6BAB300CB28D9 /* UIFont + Extension.swift */,
-				063FE1BC2EA6C5BC00CB28D9 /* UIImageView + extension.swift */,
-				063FE1C12EA6E36000CB28D9 /* UIStackView + Extension.swift */,
-				063FE1D02EABE90B00CB28D9 /* SegmentedControl + Extension.swift */,
-				06ED80542EB1385D00434D60 /* Bundle + Decodable.swift */,
+				069D306B2EC6439D008C4DA2 /* UIKit */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -169,6 +166,7 @@
 			children = (
 				0661E9F22EB539480031DB61 /* ActiveChatCell.swift */,
 				0661E9F72EB92C6C0031DB61 /* WaitingChatCell.swift */,
+				069D30672EC3AF7E008C4DA2 /* UserCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -196,6 +194,22 @@
 				0661EA032EBBC1190031DB61 /* MChat.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		069D306B2EC6439D008C4DA2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				063FE1B92EA6C34000CB28D9 /* UILabel + Extension.swift */,
+				063FE1B72EA6BD5800CB28D9 /* UIColor + Extension.swift */,
+				063FE1B32EA6B65D00CB28D9 /* UIButton + Extension.swift */,
+				063FE1B52EA6BAB300CB28D9 /* UIFont + Extension.swift */,
+				063FE1BC2EA6C5BC00CB28D9 /* UIImageView + extension.swift */,
+				063FE1C12EA6E36000CB28D9 /* UIStackView + Extension.swift */,
+				063FE1D02EABE90B00CB28D9 /* SegmentedControl + Extension.swift */,
+				06ED80542EB1385D00434D60 /* Bundle + Decodable.swift */,
+				069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		06ED804B2EAD444200434D60 /* Controllers */ = {
@@ -302,6 +316,8 @@
 				063FE1D12EABE90C00CB28D9 /* SegmentedControl + Extension.swift in Sources */,
 				063FE1BD2EA6C5BC00CB28D9 /* UIImageView + extension.swift in Sources */,
 				063FE1B82EA6BD5800CB28D9 /* UIColor + Extension.swift in Sources */,
+				069D30682EC3AF7E008C4DA2 /* UserCell.swift in Sources */,
+				069D306A2EC3B3AA008C4DA2 /* UIViewController + Extension.swift in Sources */,
 				0661E9F82EB92C6C0031DB61 /* WaitingChatCell.swift in Sources */,
 				06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */,
 				06554A462EA2CF3700810E3D /* SceneDelegate.swift in Sources */,

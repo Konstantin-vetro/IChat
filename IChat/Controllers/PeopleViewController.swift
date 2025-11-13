@@ -43,7 +43,7 @@ final class PeopleViewController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: createCompositionaLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .mainWhite
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView.register(UserCell.self, forCellWithReuseIdentifier: UserCell.reuseID)
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
         return collectionView
     }()
@@ -80,9 +80,7 @@ extension PeopleViewController {
                 guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section kind")}
                 switch section {
                 case .users:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-                    cell.backgroundColor = .red
-                    return cell
+                    return self.configure(collectionView: collectionView, cellType: UserCell.self, with: user, for: indexPath)
                 }
             }
         )
