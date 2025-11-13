@@ -36,10 +36,11 @@ final class ActiveChatCell: UICollectionViewCell, SelfConfigureCell {
     }
 
     // MARK: - Configure Cell
-    func configure(with model: MChat) {
-        friendImageView.image = UIImage(named: model.userImageString)
-        friendNameLabel.text = model.username
-        lastMessageLabel.text = model.lastMessage
+    func configure<U>(with value: U) where U : Hashable {
+        guard let value: MChat = value as? MChat else { return }
+        friendImageView.image = UIImage(named: value.userImageString)
+        friendNameLabel.text = value.username
+        lastMessageLabel.text = value.lastMessage
     }
 
     // MARK: - Setup Views

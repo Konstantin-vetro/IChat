@@ -23,8 +23,9 @@ final class WaitingChatCell: UICollectionViewCell, SelfConfigureCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(with model: MChat) {
-        friendImageView.image = UIImage(named: model.userImageString)
+    func configure<U>(with value: U) where U : Hashable {
+        guard let value: MChat = value as? MChat else { return }
+        friendImageView.image = UIImage(named: value.userImageString)
     }
 
     private func setupCell() {
