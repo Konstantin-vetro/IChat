@@ -36,6 +36,7 @@
 		0661EA042EBBC1190031DB61 /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661EA032EBBC1190031DB61 /* MChat.swift */; };
 		069D30682EC3AF7E008C4DA2 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D30672EC3AF7E008C4DA2 /* UserCell.swift */; };
 		069D306A2EC3B3AA008C4DA2 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */; };
+		06C6AE672F1E95F000A31E8F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C6AE662F1E95F000A31E8F /* ProfileViewController.swift */; };
 		06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804C2EAD447400434D60 /* MainTabbarController.swift */; };
 		06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804E2EAD44E200434D60 /* PeopleViewController.swift */; };
 		06ED80522EB137F000434D60 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ED80502EB137EE00434D60 /* activeChats.json */; };
@@ -75,6 +76,7 @@
 		0661EA032EBBC1190031DB61 /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		069D30672EC3AF7E008C4DA2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		06C6AE662F1E95F000A31E8F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		06ED804C2EAD447400434D60 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		06ED804E2EAD44E200434D60 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		06ED80502EB137EE00434D60 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				063FE1D22EAD3EC000CB28D9 /* ListViewController.swift */,
 				06ED804C2EAD447400434D60 /* MainTabbarController.swift */,
 				06ED804E2EAD44E200434D60 /* PeopleViewController.swift */,
+				06C6AE662F1E95F000A31E8F /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */,
 				06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */,
 				063FE1CD2EAAB3C200CB28D9 /* SetupProfileViewController.swift in Sources */,
+				06C6AE672F1E95F000A31E8F /* ProfileViewController.swift in Sources */,
 				06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */,
 				063FE1C22EA6E36100CB28D9 /* UIStackView + Extension.swift in Sources */,
 				063FE1CF2EAAC61600CB28D9 /* AddPhotoView.swift in Sources */,
