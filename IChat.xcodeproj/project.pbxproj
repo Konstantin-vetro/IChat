@@ -37,6 +37,8 @@
 		069D30682EC3AF7E008C4DA2 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D30672EC3AF7E008C4DA2 /* UserCell.swift */; };
 		069D306A2EC3B3AA008C4DA2 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */; };
 		06C6AE672F1E95F000A31E8F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C6AE662F1E95F000A31E8F /* ProfileViewController.swift */; };
+		06C6AE692F1FF98900A31E8F /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C6AE682F1FF98900A31E8F /* InsertableTextField.swift */; };
+		06C6AE6B2F20008700A31E8F /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C6AE6A2F20008700A31E8F /* UIView + Extensions.swift */; };
 		06ED804D2EAD447400434D60 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804C2EAD447400434D60 /* MainTabbarController.swift */; };
 		06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED804E2EAD44E200434D60 /* PeopleViewController.swift */; };
 		06ED80522EB137F000434D60 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ED80502EB137EE00434D60 /* activeChats.json */; };
@@ -77,6 +79,8 @@
 		069D30672EC3AF7E008C4DA2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		06C6AE662F1E95F000A31E8F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		06C6AE682F1FF98900A31E8F /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		06C6AE6A2F20008700A31E8F /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		06ED804C2EAD447400434D60 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		06ED804E2EAD44E200434D60 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		06ED80502EB137EE00434D60 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				063FE1C62EA8058900CB28D9 /* OneLineTextField.swift */,
 				063FE1CE2EAAC61600CB28D9 /* AddPhotoView.swift */,
 				0661E9F52EB91E360031DB61 /* GradientView.swift */,
+				06C6AE682F1FF98900A31E8F /* InsertableTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				063FE1D02EABE90B00CB28D9 /* SegmentedControl + Extension.swift */,
 				06ED80542EB1385D00434D60 /* Bundle + Decodable.swift */,
 				069D30692EC3B3AA008C4DA2 /* UIViewController + Extension.swift */,
+				06C6AE6A2F20008700A31E8F /* UIView + Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -307,8 +313,10 @@
 				063FE1C42EA8017300CB28D9 /* SignUpViewController.swift in Sources */,
 				063FE1B62EA6BAB300CB28D9 /* UIFont + Extension.swift in Sources */,
 				0661EA022EBBC1040031DB61 /* MUser.swift in Sources */,
+				06C6AE6B2F20008700A31E8F /* UIView + Extensions.swift in Sources */,
 				0661E9F32EB539480031DB61 /* ActiveChatCell.swift in Sources */,
 				06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */,
+				06C6AE692F1FF98900A31E8F /* InsertableTextField.swift in Sources */,
 				06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */,
 				063FE1CD2EAAB3C200CB28D9 /* SetupProfileViewController.swift in Sources */,
 				06C6AE672F1E95F000A31E8F /* ProfileViewController.swift in Sources */,

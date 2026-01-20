@@ -13,6 +13,8 @@ final class ProfileViewController: UIViewController {
     // MARK: - Properties
 
     // MARK: - Private properties
+
+    // MARK: - SubViews
     private let containerView = UIView()
     private let imageView = UIImageView(image: UIImage(named: "human3"), contentMode: .scaleAspectFill)
     private let nameLabel = UILabel(text: "Peter Ben", font: .systemFont(ofSize: 20, weight: .light))
@@ -20,9 +22,7 @@ final class ProfileViewController: UIViewController {
         text: "The opportunity to chat with the best man in the world",
         font: .systemFont(ofSize: 16, weight: .light)
     )
-    private let myTextField = UITextField()
-
-    // MARK: - SubViews
+    private let myTextField = InsertableTextField()
 
     // MARK: - Init
 
@@ -44,8 +44,10 @@ final class ProfileViewController: UIViewController {
         containerView.backgroundColor = .mainWhite
         containerView.layer.cornerRadius = 30
         containerView.clipsToBounds = true
-        myTextField.borderStyle = .roundedRect
-        myTextField.layer.cornerRadius = 10
+
+        if let button = myTextField.rightView as? UIButton {
+            button.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+        }
 
         [imageView, containerView].forEach { view.addSubview($0) }
         [nameLabel, aboutMeLabel, myTextField].forEach { containerView.addSubview($0) }
@@ -83,7 +85,10 @@ final class ProfileViewController: UIViewController {
     // MARK: - Methods
 
     // MARK: - Private Methods
-
+    @objc
+    private func sendMessage() {
+        print(#function)
+    }
 }
 
 // MARK: - SwiftUI Preview
