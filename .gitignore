@@ -107,5 +107,8 @@ Packages
 xcuserdata
 *.xcodeproj
 
+### Firebase
+**/GoogleService-Info.plist
+
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,swiftpackagemanager,cocoapods,carthage
