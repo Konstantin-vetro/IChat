@@ -26,7 +26,7 @@ final class AuthViewController: UIViewController {
         titleColor: .white,
         backgroundColor: .blackDark)
 
-    private let LoginButton = UIButton(
+    private let loginButton = UIButton(
         title: "Login",
         titleColor: .buttonRed,
         backgroundColor: .white,
@@ -39,6 +39,9 @@ final class AuthViewController: UIViewController {
         view.backgroundColor = .white
         googleButton.customizeGoogleButton()
         setupConstraints()
+
+        emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
 
     // MARK: - Setup Layouts
@@ -46,7 +49,7 @@ final class AuthViewController: UIViewController {
     private func setupConstraints() {
         let googleView = ButtonFormView(label: googleLabel, button: googleButton)
         let emailView = ButtonFormView(label: emailLabel, button: emailButton)
-        let loginView = ButtonFormView(label: alreadyOnboardLabel , button: LoginButton)
+        let loginView = ButtonFormView(label: alreadyOnboardLabel , button: loginButton)
 
         let stackView = UIStackView(arrangedSubviews: [googleView, emailView, loginView], axis: .vertical, spacing: 40)
 
@@ -63,6 +66,19 @@ final class AuthViewController: UIViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
+    }
+
+    // MARK: - Actions
+    @objc
+    private func emailButtonTapped() {
+        let signupVC = SignUpViewController()
+        present(signupVC, animated: true)
+    }
+
+    @objc
+    private func loginButtonTapped() {
+        let loginVC = LoginViewController()
+        present(loginVC, animated: true)
     }
 }
 

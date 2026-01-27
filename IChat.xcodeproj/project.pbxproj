@@ -21,6 +21,7 @@
 		063FE1CF2EAAC61600CB28D9 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1CE2EAAC61600CB28D9 /* AddPhotoView.swift */; };
 		063FE1D12EABE90C00CB28D9 /* SegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1D02EABE90B00CB28D9 /* SegmentedControl + Extension.swift */; };
 		063FE1D32EAD3EC000CB28D9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FE1D22EAD3EC000CB28D9 /* ListViewController.swift */; };
+		0654947B2F2939EC00737D72 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654947A2F2939EC00737D72 /* AuthenticationService.swift */; };
 		06554A442EA2CF3700810E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A432EA2CF3700810E3D /* AppDelegate.swift */; };
 		06554A462EA2CF3700810E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A452EA2CF3700810E3D /* SceneDelegate.swift */; };
 		06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06554A472EA2CF3700810E3D /* AuthViewController.swift */; };
@@ -65,6 +66,7 @@
 		063FE1CE2EAAC61600CB28D9 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		063FE1D02EABE90B00CB28D9 /* SegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl + Extension.swift"; sourceTree = "<group>"; };
 		063FE1D22EAD3EC000CB28D9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		0654947A2F2939EC00737D72 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		06554A402EA2CF3700810E3D /* IChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06554A432EA2CF3700810E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06554A452EA2CF3700810E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,15 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		065494792F29398F00737D72 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0661EA052EBBC1500031DB61 /* Models */,
+				0654947A2F2939EC00737D72 /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		06554A372EA2CF3700810E3D = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +174,7 @@
 			children = (
 				06554A432EA2CF3700810E3D /* AppDelegate.swift */,
 				06554A452EA2CF3700810E3D /* SceneDelegate.swift */,
-				0661EA052EBBC1500031DB61 /* Models */,
+				065494792F29398F00737D72 /* Services */,
 				06ED804B2EAD444200434D60 /* Controllers */,
 				063FE1C02EA6CF4200CB28D9 /* AuthVC */,
 				0661EA002EBBBFF00031DB61 /* Header */,
@@ -336,6 +347,7 @@
 				06554A482EA2CF3700810E3D /* AuthViewController.swift in Sources */,
 				06C6AE692F1FF98900A31E8F /* InsertableTextField.swift in Sources */,
 				06ED804F2EAD44E200434D60 /* PeopleViewController.swift in Sources */,
+				0654947B2F2939EC00737D72 /* AuthenticationService.swift in Sources */,
 				063FE1CD2EAAB3C200CB28D9 /* SetupProfileViewController.swift in Sources */,
 				06C6AE672F1E95F000A31E8F /* ProfileViewController.swift in Sources */,
 				06C6AE6D2F2158CD00A31E8F /* ChatRequestViewController.swift in Sources */,

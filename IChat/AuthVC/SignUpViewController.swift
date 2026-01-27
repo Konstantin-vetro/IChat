@@ -10,6 +10,9 @@ import SwiftUI
 
 final class SignUpViewController: UIViewController {
 
+    // MARK: - Private properties
+    private let authService = AuthenticationService()
+
     // MARK: - SubViews
 
     private let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
@@ -21,7 +24,7 @@ final class SignUpViewController: UIViewController {
 
     private let emailTextField = OneLineTextField(font: .avenir20())
     private let passwordTextField = OneLineTextField(font: .avenir20())
-    private let ConfirmPasswordTextField = OneLineTextField(font: .avenir20())
+    private let confirmPasswordTextField = OneLineTextField(font: .avenir20())
 
     private let signUpButton = UIButton(
         title: "Sign Up",
@@ -44,14 +47,14 @@ final class SignUpViewController: UIViewController {
         view.backgroundColor = .white
 
         setupConstraints()
+        signUpButton.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
     }
 
     // MARK: - Setup Constraints
-
     private func setupConstraints() {
         let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)
         let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField], axis: .vertical, spacing: 0)
-        let confirmPasswordStackView = UIStackView(arrangedSubviews: [confirmPasswordLabel, ConfirmPasswordTextField], axis: .vertical, spacing: 0)
+        let confirmPasswordStackView = UIStackView(arrangedSubviews: [confirmPasswordLabel, confirmPasswordTextField], axis: .vertical, spacing: 0)
 
         signUpButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
 
@@ -94,6 +97,22 @@ final class SignUpViewController: UIViewController {
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -40)
         ])
     }
+
+    // MARK: - Actions
+    @objc private func signupButtonTapped() {
+        authService.register(
+            email: emailTextField.text,
+            password: passwordTextField.text,
+            confirmPassword: confirmPasswordTextField.text) { result in
+                switch result {
+                case .success(let user):
+                    self.showAlert(with: "Успешно!", and: "Вы зарегистрированны")
+                    print(user.email)
+                case .failure(let error):
+                    self.showAlert(with: "Warning!", and: error.localizedDescription)
+                }
+            }
+    }
 }
 
 // MARK: - SwiftUI Preview
@@ -112,5 +131,15 @@ struct SignUpVCProvider: PreviewProvider {
         }
 
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+    }
+}
+
+
+extension UIViewController {
+    func showAlert(with title: String, and message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
     }
 }

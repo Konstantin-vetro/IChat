@@ -10,6 +10,9 @@ import SwiftUI
 
 final class LoginViewController: UIViewController {
 
+    // MARK: - Private properties
+    private let authService = AuthenticationService()
+
     // MARK: - Subviews
     private let welcomeLabel = UILabel(text: "Wellcome back!", font: .avenir26())
 
@@ -39,6 +42,8 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         googleButton.customizeGoogleButton()
         setupConstraints()
+
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Setup Constrains
@@ -89,6 +94,21 @@ final class LoginViewController: UIViewController {
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -40)
         ])
+    }
+
+    // MARK: - Actions
+    @objc
+    private func loginButtonTapped() {
+        authService.login(
+            email: emailTextField.text,
+            password: passwordTextField.text) { result in
+                switch result {
+                case .success(let user):
+                    self.showAlert(with: "Добро пожаловать \(user.displayName)!", and: "Вы авторизованны")
+                case .failure(let error):
+                    self.showAlert(with: "Warning!", and: error.localizedDescription)
+                }
+            }
     }
 }
 
